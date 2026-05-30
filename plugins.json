@@ -1,0 +1,28 @@
+{
+  "plugins": [
+    {
+      "name": "vaish-plugin-economy",
+      "displayName": "Economy System",
+      "description": "Complete economy system with coins, work commands, shop, and leaderboards",
+      "author": "VAISH",
+      "version": "1.0.0",
+      "category": "features",
+      "permissions": ["db.read", "db.write", "commands.register"],
+      "requiresRestart": false,
+      "verified": true,
+      "npmPackage": "vaish-plugin-economy"
+    },
+    {
+      "name": "vaish-plugin-moderation",
+      "displayName": "Advanced Moderation",
+      "description": "Auto-mod, logs, slowmode, and advanced moderation tools",
+      "author": "VAISH",
+      "version": "1.0.0",
+      "category": "moderation",
+      "permissions": ["db.read", "db.write", "commands.register"],
+      "requiresRestart": false,
+      "verified": true,
+      "npmPackage": "vaish-plugin-moderation"
+    }
+  ]
+}

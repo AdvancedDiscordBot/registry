@@ -483,6 +483,32 @@
           }
         }
       }
+    },
+    {
+      "name": "adb-plugin-server-logs",
+      "displayName": "Server Logs",
+      "description": "Comprehensive server logging plugin for tracking member changes, message edits/deletes, moderation actions, voice events, channel changes, and server boosts.",
+      "author": "DeadIndian",
+      "version": "1.0.0",
+      "category": "utility",
+      "npmPackage": "adb-plugin-server-logs",
+      "main": "index.js",
+      "requiresRestart": false,
+      "verified": true,
+      "permissions": [
+        "db.read",
+        "db.write",
+        "commands.register"
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
     }
   ]
 }

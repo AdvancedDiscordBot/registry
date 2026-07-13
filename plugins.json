@@ -11,18 +11,56 @@
       "main": "index.js",
       "requiresRestart": false,
       "verified": true,
-      "permissions": ["db.read", "db.write", "commands.register"],
+      "permissions": [
+        "db.read",
+        "db.write",
+        "commands.register"
+      ],
       "configSchema": {
         "type": "object",
         "properties": {
-          "log_channel_id": { "type": "string", "default": null },
-          "raid_joins": { "type": "number", "default": 10 },
-          "raid_seconds": { "type": "number", "default": 10 },
-          "spam_messages": { "type": "number", "default": 5 },
-          "spam_seconds": { "type": "number", "default": 3 },
-          "spam_action": { "type": "string", "enum": ["warn", "mute", "kick", "ban"], "default": "mute" },
-          "alt_min_age_days": { "type": "number", "default": 7 },
-          "alt_action": { "type": "string", "enum": ["flag", "kick"], "default": "flag" }
+          "log_channel_id": {
+            "type": "string",
+            "default": null
+          },
+          "raid_joins": {
+            "type": "number",
+            "default": 10
+          },
+          "raid_seconds": {
+            "type": "number",
+            "default": 10
+          },
+          "spam_messages": {
+            "type": "number",
+            "default": 5
+          },
+          "spam_seconds": {
+            "type": "number",
+            "default": 3
+          },
+          "spam_action": {
+            "type": "string",
+            "enum": [
+              "warn",
+              "mute",
+              "kick",
+              "ban"
+            ],
+            "default": "mute"
+          },
+          "alt_min_age_days": {
+            "type": "number",
+            "default": 7
+          },
+          "alt_action": {
+            "type": "string",
+            "enum": [
+              "flag",
+              "kick"
+            ],
+            "default": "flag"
+          }
         }
       }
     },
@@ -37,14 +75,37 @@
       "main": "index.js",
       "requiresRestart": false,
       "verified": true,
-      "permissions": ["db.read", "db.write", "commands.register", "events.register"],
+      "permissions": [
+        "db.read",
+        "db.write",
+        "commands.register",
+        "events.register"
+      ],
       "configSchema": {
         "type": "object",
         "properties": {
-          "xpPerMessage": { "type": "number", "default": 5, "minimum": 1, "maximum": 50 },
-          "xpCooldown": { "type": "number", "default": 60, "minimum": 10, "maximum": 300 },
-          "xpPerMinuteLimit": { "type": "number", "default": 100, "minimum": 10, "maximum": 1000 },
-          "levelUpChannelId": { "type": "string", "default": null }
+          "xpPerMessage": {
+            "type": "number",
+            "default": 5,
+            "minimum": 1,
+            "maximum": 50
+          },
+          "xpCooldown": {
+            "type": "number",
+            "default": 60,
+            "minimum": 10,
+            "maximum": 300
+          },
+          "xpPerMinuteLimit": {
+            "type": "number",
+            "default": 100,
+            "minimum": 10,
+            "maximum": 1000
+          },
+          "levelUpChannelId": {
+            "type": "string",
+            "default": null
+          }
         }
       }
     },
@@ -59,24 +120,53 @@
       "main": "index.js",
       "requiresRestart": true,
       "verified": true,
-      "permissions": ["db.read", "db.write", "commands.register"],
+      "permissions": [
+        "db.read",
+        "db.write",
+        "commands.register"
+      ],
       "configSchema": {
         "type": "object",
         "properties": {
-          "log_channel_id": { "type": "string", "default": null },
-          "ticket_category_id": { "type": "string", "default": null },
-          "ticket_support_role_id": { "type": "string", "default": null },
-          "ticket_log_channel_id": { "type": "string", "default": null },
+          "log_channel_id": {
+            "type": "string",
+            "default": null
+          },
+          "ticket_category_id": {
+            "type": "string",
+            "default": null
+          },
+          "ticket_support_role_id": {
+            "type": "string",
+            "default": null
+          },
+          "ticket_log_channel_id": {
+            "type": "string",
+            "default": null
+          },
           "warn_thresholds": {
             "type": "object",
             "default": {
-              "3": { "action": "timeout", "duration": "1h" },
-              "5": { "action": "timeout", "duration": "24h" },
-              "7": { "action": "kick" },
-              "10": { "action": "ban" }
+              "3": {
+                "action": "timeout",
+                "duration": "1h"
+              },
+              "5": {
+                "action": "timeout",
+                "duration": "24h"
+              },
+              "7": {
+                "action": "kick"
+              },
+              "10": {
+                "action": "ban"
+              }
             }
           },
-          "dm_on_action": { "type": "boolean", "default": true }
+          "dm_on_action": {
+            "type": "boolean",
+            "default": true
+          }
         }
       }
     },
@@ -91,7 +181,11 @@
       "main": "index.js",
       "requiresRestart": false,
       "verified": true,
-      "permissions": ["db.read", "db.write", "commands.register"],
+      "permissions": [
+        "db.read",
+        "db.write",
+        "commands.register"
+      ],
       "configSchema": {
         "type": "object",
         "properties": {
@@ -116,13 +210,31 @@
       "main": "index.js",
       "requiresRestart": false,
       "verified": true,
-      "permissions": ["db.read", "db.write", "commands.register", "manageWebhooks"],
+      "permissions": [
+        "db.read",
+        "db.write",
+        "commands.register",
+        "manageWebhooks"
+      ],
       "configSchema": {
         "type": "object",
         "properties": {
-          "channel": { "type": "string", "description": "Channel ID where confessions appear" },
-          "cooldown": { "type": "number", "default": 60, "minimum": 0, "maximum": 3600, "description": "Cooldown in seconds between confessions" },
-          "requireApproval": { "type": "boolean", "default": false, "description": "Require mod approval before posting" }
+          "channel": {
+            "type": "string",
+            "description": "Channel ID where confessions appear"
+          },
+          "cooldown": {
+            "type": "number",
+            "default": 60,
+            "minimum": 0,
+            "maximum": 3600,
+            "description": "Cooldown in seconds between confessions"
+          },
+          "requireApproval": {
+            "type": "boolean",
+            "default": false,
+            "description": "Require mod approval before posting"
+          }
         }
       }
     },
@@ -137,13 +249,29 @@
       "main": "index.js",
       "requiresRestart": false,
       "verified": true,
-      "permissions": ["db.read", "db.write", "commands.register", "messages.read"],
+      "permissions": [
+        "db.read",
+        "db.write",
+        "commands.register",
+        "messages.read"
+      ],
       "configSchema": {
         "type": "object",
         "properties": {
-          "channel": { "type": "string", "description": "Channel ID where counting happens" },
-          "resetOnFail": { "type": "boolean", "default": true, "description": "Reset to 0 on wrong count" },
-          "milestones": { "type": "string", "default": "10,25,50,100,250,500,1000", "description": "Comma-separated milestones that trigger a celebratory message" }
+          "channel": {
+            "type": "string",
+            "description": "Channel ID where counting happens"
+          },
+          "resetOnFail": {
+            "type": "boolean",
+            "default": true,
+            "description": "Reset to 0 on wrong count"
+          },
+          "milestones": {
+            "type": "string",
+            "default": "10,25,50,100,250,500,1000",
+            "description": "Comma-separated milestones that trigger a celebratory message"
+          }
         }
       }
     },
@@ -158,12 +286,26 @@
       "main": "index.js",
       "requiresRestart": false,
       "verified": true,
-      "permissions": ["db.read", "db.write", "commands.register"],
+      "permissions": [
+        "db.read",
+        "db.write",
+        "commands.register"
+      ],
       "configSchema": {
         "type": "object",
         "properties": {
-          "defaultDuration": { "type": "string", "default": "1h", "description": "Default giveaway duration (e.g., 30m, 1h, 1d)" },
-          "maxWinners": { "type": "number", "default": 10, "minimum": 1, "maximum": 50, "description": "Max winners per giveaway" }
+          "defaultDuration": {
+            "type": "string",
+            "default": "1h",
+            "description": "Default giveaway duration (e.g., 30m, 1h, 1d)"
+          },
+          "maxWinners": {
+            "type": "number",
+            "default": 10,
+            "minimum": 1,
+            "maximum": 50,
+            "description": "Max winners per giveaway"
+          }
         }
       }
     },
@@ -178,12 +320,24 @@
       "main": "index.js",
       "requiresRestart": false,
       "verified": true,
-      "permissions": ["db.read", "db.write", "commands.register"],
+      "permissions": [
+        "db.read",
+        "db.write",
+        "commands.register"
+      ],
       "configSchema": {
         "type": "object",
         "properties": {
-          "trackLeaves": { "type": "boolean", "default": true, "description": "Deduct invite credit when an invited member leaves" },
-          "bonusRoles": { "type": "string", "default": "", "description": "Comma-separated: roleID:inviteCount e.g. 123:5,456:10" }
+          "trackLeaves": {
+            "type": "boolean",
+            "default": true,
+            "description": "Deduct invite credit when an invited member leaves"
+          },
+          "bonusRoles": {
+            "type": "string",
+            "default": "",
+            "description": "Comma-separated: roleID:inviteCount e.g. 123:5,456:10"
+          }
         }
       }
     },
@@ -198,11 +352,76 @@
       "main": "index.js",
       "requiresRestart": false,
       "verified": true,
-      "permissions": ["db.read", "db.write", "commands.register"],
+      "permissions": [
+        "db.read",
+        "db.write",
+        "commands.register"
+      ],
       "configSchema": {
         "type": "object",
         "properties": {
-          "maxItems": { "type": "number", "default": 50, "minimum": 1, "maximum": 500, "description": "Max to-do items per user per server" }
+          "maxItems": {
+            "type": "number",
+            "default": 50,
+            "minimum": 1,
+            "maximum": 500,
+            "description": "Max to-do items per user per server"
+          }
+        }
+      }
+    },
+    {
+      "name": "adb-plugin-tempvoice",
+      "displayName": "Temp Voice",
+      "description": "Temporary voice channels: create private voice rooms on demand with auto-delete, bitrate, and user limit settings. Commands: setup, setup-category, name, limit, lock, unlock, permit, deny, claim, rename, bitrate.",
+      "author": "DeadIndian",
+      "version": "1.0.0",
+      "category": "utility",
+      "npmPackage": "adb-plugin-tempvoice",
+      "main": "index.js",
+      "requiresRestart": false,
+      "verified": true,
+      "permissions": [
+        "db.read",
+        "db.write",
+        "commands.register"
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "creationChannelId": {
+            "type": "string",
+            "default": null
+          },
+          "categoryId": {
+            "type": "string",
+            "default": null
+          },
+          "nameTemplate": {
+            "type": "string",
+            "default": "{username}'s channel"
+          },
+          "autoDeleteDelay": {
+            "type": "number",
+            "default": 30,
+            "min": 0
+          },
+          "maxChannels": {
+            "type": "number",
+            "default": 0
+          },
+          "bitrateDefault": {
+            "type": "number",
+            "default": 64000,
+            "min": 8000,
+            "max": 384000
+          },
+          "userLimitDefault": {
+            "type": "number",
+            "default": 0,
+            "min": 0,
+            "max": 99
+          }
         }
       }
     }

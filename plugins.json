@@ -561,6 +561,38 @@
           }
         }
       }
+    },
+    {
+      "name": "adb-plugin-reaction-roles",
+      "displayName": "Reaction Roles",
+      "description": "Comprehensive reaction roles plugin: unlimited panels per server, emoji/button/dropdown modes (single/multiple/exclusive), role groups with labels, descriptions, and permission controls.",
+      "author": "DeadIndian",
+      "version": "1.0.0",
+      "category": "utility",
+      "npmPackage": "adb-plugin-reaction-roles",
+      "main": "index.js",
+      "requiresRestart": false,
+      "verified": true,
+      "permissions": [
+        "db.read",
+        "db.write",
+        "commands.register"
+      ],
+      "discordPermissions": [
+        "SendMessages",
+        "ManageRoles",
+        "AddReactions",
+        "ManageGuild"
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
     }
   ]
 }

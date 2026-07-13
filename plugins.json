@@ -509,6 +509,32 @@
           }
         }
       }
+    },
+    {
+      "name": "adb-plugin-automod",
+      "displayName": "AutoMod",
+      "description": "Advanced auto-moderation with spam, link, word, caps, mention, emoji, invite filters and actions: delete, warn, mute, timeout, log.",
+      "author": "DeadIndian",
+      "version": "1.0.0",
+      "category": "moderation",
+      "npmPackage": "adb-plugin-automod",
+      "main": "index.js",
+      "requiresRestart": false,
+      "verified": true,
+      "permissions": [
+        "db.read",
+        "db.write",
+        "commands.register"
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
     }
   ]
 }

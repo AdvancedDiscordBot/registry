@@ -424,6 +424,65 @@
           }
         }
       }
+    },
+    {
+      "name": "adb-plugin-welcome",
+      "displayName": "Welcome",
+      "description": "Welcome & Goodbye: greet members with styled embeds and beautiful Canvas image cards. DM notifications, custom messages, avatar/icon integration.",
+      "author": "DeadIndian",
+      "version": "1.0.0",
+      "category": "core features",
+      "npmPackage": "adb-plugin-welcome",
+      "main": "index.js",
+      "requiresRestart": false,
+      "verified": true,
+      "permissions": [
+        "db.read",
+        "db.write",
+        "commands.register"
+      ],
+      "discordPermissions": [
+        "SendMessages",
+        "EmbedLinks",
+        "AttachFiles"
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          },
+          "welcomeChannelId": {
+            "type": "string",
+            "default": null
+          },
+          "goodbyeChannelId": {
+            "type": "string",
+            "default": null
+          },
+          "welcomeMessage": {
+            "type": "string",
+            "default": "Welcome {user} to {server}! Enjoy your stay."
+          },
+          "goodbyeMessage": {
+            "type": "string",
+            "default": "Goodbye {user}, we will miss you!"
+          },
+          "dmWelcome": {
+            "type": "boolean",
+            "default": false
+          },
+          "sendWelcomeImage": {
+            "type": "boolean",
+            "default": true
+          },
+          "retentionDays": {
+            "type": "number",
+            "default": 0
+          }
+        }
+      }
     }
   ]
 }

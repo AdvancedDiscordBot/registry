@@ -78,7 +78,11 @@
       "permissions": [
         "db.read",
         "db.write",
-        "commands.register"
+        "commands.register",
+        "discord.SendMessages",
+        "discord.ManageMessages",
+        "discord.ModerateMembers",
+        "events.register"
       ],
       "configSchema": {
         "type": "object",
@@ -213,7 +217,11 @@
       "permissions": [
         "db.read",
         "db.write",
-        "commands.register"
+        "commands.register",
+        "discord.SendMessages",
+        "discord.ManageGuild",
+        "discord.UseApplicationCommands",
+        "events.register"
       ],
       "configSchema": {
         "type": "object",
@@ -526,7 +534,13 @@
       "permissions": [
         "db.read",
         "db.write",
-        "commands.register"
+        "commands.register",
+        "discord.ManageChannels",
+        "discord.SendMessages",
+        "discord.Connect",
+        "discord.MoveMembers",
+        "events.register",
+        "system.raw-client"
       ],
       "configSchema": {
         "type": "object",
@@ -585,7 +599,10 @@
       "permissions": [
         "db.read",
         "db.write",
-        "commands.register"
+        "commands.register",
+        "discord.SendMessages",
+        "discord.EmbedLinks",
+        "events.register"
       ],
       "configSchema": {
         "type": "object",
@@ -614,7 +631,13 @@
       "permissions": [
         "db.read",
         "db.write",
-        "commands.register"
+        "commands.register",
+        "discord.SendMessages",
+        "discord.EmbedLinks",
+        "discord.AttachFiles",
+        "discord.GuildInfo",
+        "discord.ManageRoles",
+        "events.register"
       ],
       "configSchema": {
         "type": "object",
